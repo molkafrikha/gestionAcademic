@@ -4,32 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.io.Serializable;
 
 @Entity
 @Setter
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
-@ToString
-
-
-public class Etudiant implements Serializable {
-
+public class Cours implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long numEtudiant;
-    private String nom;
-    private String prenom;
-    private String matricule;
-
-
+    private long coursCode;
+    private String coursNom;
 }
-
-
-
-
